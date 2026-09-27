@@ -1,11 +1,14 @@
-import dotenv from 'dotenv';
-import { defineConfig, env } from 'prisma/config';
+import { config } from 'dotenv';
+import { defineConfig } from 'prisma/config';
 
-dotenv.config({ path: '.env.local' });
+// Carrega variáveis locais (ignora silenciosamente se o arquivo não existir)
+config({ path: '.env.local' });
+config();
 
 export default defineConfig({
 	datasource: {
-		url: env('DATABASE_URL'),
+		// Usa fallback vazio para não quebrar durante o `pnpm install` da Vercel
+		url: process.env.DATABASE_URL ?? '',
 	},
 	migrations: {
 		path: 'prisma/migrations',
