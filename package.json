@@ -17,11 +17,11 @@
 		"format:fix": "prettier --write .",
 		"db:migrate": "prisma migrate dev",
 		"db:reset": "prisma migrate reset",
-		"db:generate": "prisma generate",
+		"db:generate": "prisma generate --schema=./prisma/schema.prisma",
 		"db:studio": "prisma studio",
 		"e2b:build": "tsx \"./sandbox-templates/nextjs/build.prod.ts\"",
 		"e2b:build:dev": "tsx \"./sandbox-templates/nextjs/build.dev.ts\"",
-		"postinstall": "pnpm run db:generate"
+		"postinstall": "prisma generate --schema=./prisma/schema.prisma"
 	},
 	"dependencies": {
 		"@clerk/nextjs": "^7.9.2",
@@ -109,46 +109,13 @@
 	},
 	"description": "AI-powered application builder that lets you create apps and websites by chatting with AI.",
 	"keywords": [
-		"reactjs",
-		"nextjs",
-		"nextjs-16",
-		"react-19",
-		"ai-app-builder",
-		"code-generation",
-		"clerk",
-		"clerk-auth",
-		"prisma",
-		"prisma-orm",
-		"trpc",
-		"openai",
-		"e2b",
-		"code-interpreter",
-		"inngest",
-		"agent-kit",
-		"shadcn-ui",
-		"radix-ui",
-		"tailwindcss",
-		"react-query",
-		"tanstack-query",
-		"zod",
-		"react-hook-form",
-		"react-hot-toast",
-		"lucide-react",
-		"typescript",
-		"javascript",
-		"postgresql",
-		"vercel",
-		"postcss",
-		"prettier",
-		"eslint",
-		"react",
-		"react-dom",
-		"date-fns",
-		"clsx",
-		"tailwind-merge",
-		"class-variance-authority",
-		"zustand",
-		"superjson"
+		"reactjs", "nextjs", "nextjs-16", "react-19", "ai-app-builder", "code-generation",
+		"clerk", "clerk-auth", "prisma", "prisma-orm", "trpc", "openai", "e2b",
+		"code-interpreter", "inngest", "agent-kit", "shadcn-ui", "radix-ui", "tailwindcss",
+		"react-query", "tanstack-query", "zod", "react-hook-form", "react-hot-toast",
+		"lucide-react", "typescript", "javascript", "postgresql", "vercel", "postcss",
+		"prettier", "eslint", "react", "react-dom", "date-fns", "clsx", "tailwind-merge",
+		"class-variance-authority", "zustand", "superjson"
 	],
 	"license": "MIT",
 	"repository": {
@@ -161,13 +128,7 @@
 		"email": "sanidhyyy@gmail.com"
 	},
 	"funding": [
-		{
-			"type": "patreon",
-			"url": "https://www.patreon.com/sanidhy"
-		},
-		{
-			"type": "Buy me a coffee",
-			"url": "https://www.buymeacoffee.com/sanidhy"
-		}
+		{ "type": "patreon", "url": "https://www.patreon.com/sanidhy" },
+		{ "type": "Buy me a coffee", "url": "https://www.buymeacoffee.com/sanidhy" }
 	]
 }
