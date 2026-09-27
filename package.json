@@ -2,6 +2,7 @@
 	"name": "lovable-clone",
 	"version": "1.0.1",
 	"private": true,
+	"packageManager": "pnpm@10.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "mprocs \"pnpm run dev:next\" \"pnpm run dev:webhook\" \"pnpm run dev:inngest\" \"pnpm run db:studio\"",
